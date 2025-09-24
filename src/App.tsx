@@ -21,11 +21,14 @@ const supabase = supabaseUrl && supabaseAnonKey
   : null;
 
 function App() {
-  const [user, setUser] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<any>({ id: 'demo-user', email: 'demo@example.com' });
+  const [loading, setLoading] = useState(false);
   const [activeView, setActiveView] = useState('dashboard');
 
   useEffect(() => {
+    // Simulate already logged in for screenshot purposes
+    return;
+    
     if (!supabase) {
       setLoading(false);
       return;
