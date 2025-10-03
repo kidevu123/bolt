@@ -127,23 +127,23 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-cream via-soft-beige to-warm-white">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-rose-200 sticky top-0 z-50">
+      <header className="nav-elegant sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-rose-500" />
-              <span className="text-2xl font-serif text-gray-800">Our Private Space</span>
+              <Heart className="h-8 w-8 text-dusty-rose" />
+              <span className="text-2xl font-serif text-elegant">Our Private Space</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <Lock className="h-4 w-4 text-rose-400" />
-                <span className="text-sm text-gray-600">Secure & Private</span>
+                <Lock className="h-4 w-4 text-dusty-rose" />
+                <span className="text-sm text-elegant-light">Secure & Private</span>
               </div>
               <button
                 onClick={handleSignOut}
-                className="flex items-center space-x-1 text-gray-600 hover:text-rose-600 transition-colors"
+                className="flex items-center space-x-1 text-elegant-light hover:text-dusty-rose transition-colors"
               >
                 <LogOut className="h-4 w-4" />
                 <span>Sign Out</span>
@@ -155,7 +155,7 @@ function App() {
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className="w-64 bg-white/60 backdrop-blur-sm border-r border-rose-200 min-h-screen">
+        <aside className="w-64 sidebar-elegant min-h-screen">
           <nav className="p-4">
             <div className="space-y-2">
               {navigation.map((item) => {
@@ -166,8 +166,8 @@ function App() {
                     onClick={() => setActiveView(item.id)}
                     className={`w-full flex items-center space-x-3 px-4 py-3 text-left rounded-xl transition-all duration-200 ${
                       activeView === item.id
-                        ? 'bg-rose-100 text-rose-700 shadow-sm'
-                        : 'text-gray-600 hover:bg-rose-50 hover:text-rose-600'
+                        ? 'bg-dusty-rose/10 text-dusty-rose shadow-sm'
+                        : 'text-elegant-light hover:bg-dusty-rose/5 hover:text-dusty-rose'
                     }`}
                   >
                     <Icon className="h-5 w-5" />
